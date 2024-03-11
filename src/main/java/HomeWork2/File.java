@@ -1,7 +1,15 @@
-package org.example;
+package HomeWork2;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+// Класс представляет файл в файловой системе
+public class File extends FileSystemComponent {
+
+    // Конструктор класса, принимает имя файла
+    public File(String name) {
+        super(name);
+    }
+    // Метод для отображения информации о файле
+    @Override
+    public void display() {
+        System.out.println("File: " + name); // Выводим имя файла
     }
 }
