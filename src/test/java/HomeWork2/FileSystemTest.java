@@ -47,6 +47,7 @@ public class FileSystemTest {
     @ValueSource(strings = {"name with space", "name/with/slash"})
     public void testInvalidName(String name) {
         // Ожидаем IllegalArgumentException при попытке создания файла или папки с недопустимым именем
+        //а почему такие имена считаются не валидными?
         assertThrows(IllegalArgumentException.class, () -> new File(name));
         assertThrows(IllegalArgumentException.class, () -> new Folder(name));
     }
